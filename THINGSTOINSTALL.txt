@@ -1,0 +1,10 @@
+//Dovecot(mail delivery server[Agent] )
+sudo apt install dovecot-pop3d -y
+//then configure plain text auth
+sudo nano /etc/dovecot/conf.d/10-auth.conf
+//Find and change:
+disable_plaintext_auth = no
+auth_mechanisms = plain login
+//Save and restart:
+bashsudo systemctl restart dovecot
+sudo systemctl status dovecot

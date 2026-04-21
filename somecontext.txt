@@ -1,0 +1,39 @@
+//ass is split in 2 sections basically
+//Sec A: Vacation auto responder
+checks mailbox with POP3 and only checks with subject prac7 
+Never reply to: Same person <=2, mailing listings
+never delete original mailbox
+ONLYY SEND SEDNER,subject AND SIZE OF ALL MESSAGES IN MAILBOX
+//Sec B: MAil manager
+connects via POP3 and lists all MESSAGES
+shows SENDER,subject AND SIZE OF EACH MESSAGES IN MAILBOX
+allows user to mark messages for deletion(USer interface)
+Deletes marked messages without downloading them
+Uses TOP command instead of RETR to get headers without body
+
+
+//
+Detecting mailing lists:
+RFC 2369 defines a List-Id header that mailing lists add. 
+We also check for Precedence: bulk and Precedence: list headers which are commonly added by mailing lists.
+ If any of these are present we skip the message.
+
+//for not deleting
+After sending RETR, just QUIT and do no delete
+//FOR sender,subject...
+The TOP n 0 command retrieves just the headers of message n with zero body lines
+ for sender, subject and size without downloading the full message.
+ //POP3 COMMANDS NEEDED
+ FOR Sec A:
+ USER    — authenticate username
+PASS    — authenticate password
+STAT    — get message count
+RETR n  — retrieve full message n (need full headers to parse From/Subject)
+QUIT    — close without deleting
+For Sec B:
+USER    — authenticate username
+PASS    — authenticate password
+STAT    — get message count and total size
+TOP n 0 — get headers only of message n (no body download)
+DELE n  — delete marked messages
+QUIT    — commit deletions and close
