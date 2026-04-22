@@ -1,3 +1,4 @@
+//filter for mailbox, extract headers, and determine if we should reply with vacation message
 import java.util.*;
 
 /**

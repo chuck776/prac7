@@ -1,6 +1,2 @@
-/EmailMessage$Builder.class
-/EmailMessage.class
-/EmailParser$ParsedEmail.class
-/EmailParser.class
-/Pop3Connection.class
-/SmtpConnection.class
+*.class
+*.tar

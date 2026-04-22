@@ -1,3 +1,4 @@
+//prac7, buidling vacation auto-reply email messages with proper headers and MIME formatting
 import java.text.SimpleDateFormat;
 import java.util.*;
 

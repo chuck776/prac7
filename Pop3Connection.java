@@ -1,3 +1,4 @@
+//checking mailbox for new emials
 import java.io.*;
 import java.net.*;
 import java.util.*;

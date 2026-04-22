@@ -4,12 +4,8 @@ checks mailbox with POP3 and only checks with subject prac7
 Never reply to: Same person <=2, mailing listings
 never delete original mailbox
 ONLYY SEND SEDNER,subject AND SIZE OF ALL MESSAGES IN MAILBOX
-//Sec B: MAil manager
-connects via POP3 and lists all MESSAGES
-shows SENDER,subject AND SIZE OF EACH MESSAGES IN MAILBOX
-allows user to mark messages for deletion(USer interface)
-Deletes marked messages without downloading them
-Uses TOP command instead of RETR to get headers without body
+//We need to find a way to ensure you don't send  to the same person twice
+//keep track of people in a txt file?
 
 
 //

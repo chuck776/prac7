@@ -1,3 +1,4 @@
+//prac7: Send vacation auto-replies to messages with subject "prac7" using SMTP and POP3 sockets
 import java.io.*;
 import java.net.*;
 import java.util.*;
