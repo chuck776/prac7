@@ -8,3 +8,5 @@ auth_mechanisms = plain login
 //Save and restart:
 bashsudo systemctl restart dovecot
 sudo systemctl status dovecot
+//USE this command to send yourself an email quikly
+echo "Please reply to this" | mail -s "prac7" chichi@localhost
